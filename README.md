@@ -16,24 +16,26 @@ nodejs, webpack, babel, react, material-ui, firebase
 3. Изучите файлы src/index.js, src/emoji.js
 4. Запустите `node index.js`
 
-Подробности про node: https://nodejs.org/en/docs/
+* Подробности про node: https://nodejs.org/en/docs/
 
 ## Модульные тесты
 
 1. `npm init`. Соглашайтесь на все значения по умолчанию. Это даст возможность менеджеру пакетов npm устанавливать зависимости.
 2. Установите две библиотеки для модульного тестирования mocha и should  `npm install mocha should --save-dev`
 3. Изучите node_monules.
-4. Теперь можно запустить тесты `node node_modules\mocha\bin\mocha tests\*`
-5. Чтобы не писать каждый раз такую длинную строку, настраиваем запуск через npm. В packages.json добавляем узел:
+4. Изучите файл tests/emojiSpec.js
+5. Теперь можно запустить тесты `node node_modules\mocha\bin\mocha tests\*`
+6. Чтобы не писать каждый раз такую длинную строку, настраиваем запуск через npm. В packages.json добавляем узел:
 
-```{js}
-    "scripts": { "test": "mocha tests\*" }
-```
-после чего можно запускать тесты из консоли командой `npm test`. Заметьте, что в скриптах npm можно не указывать путь до mocha — он поймет, что это npm-пакет и благодаря package.json у пакета mocha сам поймет, какой из скриптов запускать в пакете mocha.
+    ```{js}
+        "scripts": { "test": "mocha tests\*" }
+    ```
+    после чего можно запускать тесты из консоли командой `npm test`. Заметьте, что в скриптах npm можно не указывать путь до mocha — он поймет, что это npm-пакет и благодаря package.json у пакета mocha сам поймет, какой из скриптов запускать в пакете mocha.
+7. Создайте еще какой-нибудь тест и запустите.
 
 
-Подробности про npm и package.json: https://docs.npmjs.com/
-Подробности про mocha: https://mochajs.org/
+* Подробности про npm и package.json: https://docs.npmjs.com/
+* Подробности про mocha: https://mochajs.org/
 
 Следующий шаг — `git checkout webpack`
 
