@@ -24,7 +24,13 @@ nodejs, webpack, babel, react, material-ui, firebase
 2. Установите две библиотеки для модульного тестирования mocha и should  `npm install mocha should --save-dev`
 3. Изучите node_monules.
 4. Теперь можно запустить тесты `node node_modules\mocha\bin\mocha tests\*`
-5. Чтобы не писать каждый раз такую длинную строку, настраиваем скрипт в packages.json:
+5. Чтобы не писать каждый раз такую длинную строку, настраиваем запуск через npm. В packages.json добавляем узел:
+
+```{js}
+    "scripts": { "test": "mocha tests\*" }
+```
+после чего можно запускать тесты из консоли командой `npm test`. Заметьте, что в скриптах npm можно не указывать путь до mocha — он поймет, что это npm-пакет и благодаря package.json у пакета mocha сам поймет, какой из скриптов запускать в пакете mocha.
+
 
 Подробности про npm и package.json: https://docs.npmjs.com/
 Подробности про mocha: https://mochajs.org/
