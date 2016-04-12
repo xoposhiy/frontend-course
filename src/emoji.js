@@ -1,7 +1,3 @@
-var format = function(message){
+export function format(message){
     return message.replace(/:\)/g, "☺");
-}
-
-module.exports = {
-    format:format
 }
