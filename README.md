@@ -14,7 +14,7 @@ nodejs, webpack, babel, react, material-ui, firebase
 1. Установите последнюю версию http://nodejs.org
 2. Откройте консоль и перейдите в директорию этого проекта.
 3. Изучите файлы src/index.js, src/emoji.js — так создаются и используются модули в nodejs
-4. Запустите `node index.js`
+4. Запустите `node src/index.js`
 
 Подробности про модули в Node: https://nodejs.org/api/modules.html
 
@@ -27,10 +27,10 @@ nodejs, webpack, babel, react, material-ui, firebase
 3. Изучите node_monules.
 4. Изучите файл tests/emojiSpec.js
 5. Теперь можно запустить тесты `node node_modules\mocha\bin\mocha tests\*`
-6. Чтобы не писать каждый раз такую длинную строку, настраиваем запуск через npm. В packages.json добавляем узел:
+6. Чтобы не писать каждый раз такую длинную строку, настраиваем запуск через npm. В packages.json правим узел scripts:
 
     ```{js}
-        "scripts": { "test": "mocha tests\*" }
+        "scripts": { "test": "mocha tests/*" }
     ```
     После этого можно запускать тесты из консоли командой `npm test`. Заметьте, что в скриптах npm можно не указывать путь до mocha — он поймет, что это npm-пакет и благодаря package.json у пакета mocha сам поймет, какой из скриптов запускать в пакете mocha.
 7. Создайте ещё какой-нибудь тест и запустите.
