@@ -1,4 +1,5 @@
 var emoji = require("./emoji.js");
 
-console.log(emoji.format("Hello world! :)"));
+var container = document.getElementById("app");
+container.innerText = emoji.format(container.innerText);
 
