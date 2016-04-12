@@ -1,0 +1,26 @@
+{
+  "name": "frontend-course",
+  "version": "1.0.0",
+  "description": "nodejs, webpack, babel, react, material-ui, firebase",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha tests/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xoposhiy/frontend-course.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xoposhiy/frontend-course/issues"
+  },
+  "homepage": "https://github.com/xoposhiy/frontend-course#readme",
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "should": "^8.3.0"
+  }
+}
