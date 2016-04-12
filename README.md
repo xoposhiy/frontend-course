@@ -16,7 +16,7 @@ nodejs, webpack, babel, react, material-ui, firebase
 3. Изучите файлы src/index.js, src/emoji.js
 4. Запустите `node index.js`
 
-* Подробности про node: https://nodejs.org/en/docs/
+Подробности про node: https://nodejs.org/en/docs/
 
 ## Модульные тесты
 
@@ -34,8 +34,9 @@ nodejs, webpack, babel, react, material-ui, firebase
 7. Создайте еще какой-нибудь тест и запустите.
 
 
-* Подробности про npm и package.json: https://docs.npmjs.com/
-* Подробности про mocha: https://mochajs.org/
+Подробности про npm и package.json: https://docs.npmjs.com/
+
+Подробности про mocha: https://mochajs.org/
 
 Следующий шаг — `git checkout webpack`
 
