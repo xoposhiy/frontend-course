@@ -1,5 +1,5 @@
-var emoji = require("./emoji.js");
+import {format} from "./emoji.js";
 
 var container = document.getElementById("app");
-container.innerText = emoji.format(container.innerText);
+container.innerText = format(container.innerText);
 
