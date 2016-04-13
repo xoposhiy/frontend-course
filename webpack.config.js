@@ -1,12 +1,14 @@
 module.exports = {
     devtool: "eval-source-map",
-    entry: "./src/index.js",
+    entry: "./src/index.jsx",
     output: {
         filename: "bundle.js"
     },
     module: {
         loaders: [
-            { test: /\.js$/, exclude: /node_modules/, loader: "uglify!babel-loader" }
+            { test: /\.jsx?$/, exclude: /node_modules/, loader: "babel" },
+            { test: /\.css?$/, loader: "style!css?modules" },
+            
         ]
     }
 };

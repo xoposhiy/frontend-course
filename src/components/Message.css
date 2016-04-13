@@ -1,4 +1,10 @@
-.message{
+.message {
 	background-color: #eee;
 	margin: 1px;
+    cursor: default;
+}
+
+.highlighted{
+	background-color: yellow;
+    
 }
