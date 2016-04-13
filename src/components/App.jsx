@@ -1,6 +1,7 @@
 import React from 'react';
 import MessageList from './MessageList.jsx';
 import "./App.css";
+import {AppBar} from "material-ui";
 
 export default class App extends React.Component {
     constructor(props) {
@@ -16,6 +17,7 @@ export default class App extends React.Component {
     render() {
         return (
             <div style={{margin: "0 auto", maxWidth: "600px"}}>
+                <AppBar title="Chat App" />  
                 <MessageList messages={this.state.messages} />
             </div>
         );
