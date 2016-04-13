@@ -1,5 +1,6 @@
 import React from 'react';
 import MessageList from './MessageList.jsx';
+import "./App.css";
 
 export default class App extends React.Component {
     constructor(props) {
@@ -7,7 +8,7 @@ export default class App extends React.Component {
         this.state = {
             messages: [
                 {user:'pe', text: 'hi :)'},
-				{user:'yoda', text: 'world hello'}
+                {user:'yoda', text: 'world hello'}
             ]
         };
     }
@@ -15,7 +16,7 @@ export default class App extends React.Component {
     render() {
         return (
             <div style={{margin: "0 auto", maxWidth: "600px"}}>
-				<MessageList messages={this.state.messages} />
+                <MessageList messages={this.state.messages} />
             </div>
         );
     }
