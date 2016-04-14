@@ -1,6 +1,7 @@
 import React from 'react';
 import Message from "./Message.jsx";
 import {format} from "../emoji.js";
+import {List, Card, Subheader} from "material-ui";
 
 export default class MessageList extends React.Component {
     constructor(props) {
@@ -14,10 +15,12 @@ export default class MessageList extends React.Component {
         var messageNodes = this.state.messages.map(
             (m, i) => <Message {...m} key={i} />);
         return (
-            <div>
-                <div>Last messages:</div>
-                {messageNodes}
-            </div>
+            <Card>
+                <List>
+                    <Subheader>Last messages:</Subheader>
+                    {messageNodes}
+                </List>
+            </Card>
         )
     }
 }
