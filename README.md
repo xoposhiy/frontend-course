@@ -2,18 +2,22 @@
 
 nodejs, webpack, babel, react, material-ui, firebase
 
-# Material-UI
+# Firebase
 
-Это набор готовых react-компонент, реализующих стиль material-design.
-Когда хочется красиво, а верстать не хочется, нужно не верстать!
+Firebase — это сервис, предоставляющий простой готовый бэкенд-хранилище для вашего веб-приложения.
+Используя Firebase вы можете делать простые веб-приложения вообще без хостинга:
+верстку и скрипты хостить, например, на github.io, а в качестве бэкенда использовать Firebase  
 
-1. `npm i material-ui --save`
-2. Изучите App.jsx — там пример использование компонента AppBar (http://www.material-ui.com/#/components/app-bar)
-3. Переведите MessageList на использование компонента List внутри Card, а Message — на использование ListItem. (см. http://www.material-ui.com/#/components)
-4. Создайте еще один компонент MessageBox.jsx с полем ввода и кнопкой Send.
-5. Сделайте так, чтобы по нажатию Send MessageBox генерировал событие onSend.
-6. Подпишите на это событие MessageList, так чтобы новое сообещние появлялось в списке.
+1. `npm i firebase --save`
+2. Прочитайте Quick start. https://www.firebase.com/docs/web/quickstart.html
+3. Добавьте в конструктор App.jsx создание объекта Firebase с адресом https://front-lesson.firebaseio.com/messages
+4. Подпишитесь на последние 10 сообщений по этому адресу 
+(см методы limitToLast и on("value" ...) в [докуметации Firebase](https://www.firebase.com/docs/web/api/))
+5. В addMessage добавьте сообщение методом push. 
+6. Запустите, все должно работать!
 
-Результат выполнения задания — `git checkout material-finished`. 
+https://www.firebase.com/docs/web/quickstart.html
 
-Следующий шаг туториала — `git checkout firebase`
+https://www.firebase.com/docs/web/api/
+
+Результат выполнения задания — `git checkout firebase-finished`.

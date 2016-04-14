@@ -1,7 +1,6 @@
 import React from 'react';
 import MessageList from './MessageList.jsx';
 import MessageBox from './MessageBox.jsx';
-import "./App.css";
 import {AppBar} from "material-ui";
 
 export default class App extends React.Component {

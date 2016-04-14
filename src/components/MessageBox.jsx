@@ -1,6 +1,4 @@
 import React from 'react';
-import {format} from '../emoji.js';
-import styles from './Message.css';
 import {CardText, FlatButton, Card} from 'material-ui';
 
 export default class MessageBox extends React.Component {
@@ -13,12 +11,12 @@ export default class MessageBox extends React.Component {
     onTextChange(event) {
        this.setState({ text: event.target.value });
     }
+    
     onKeyUp(event) {
         if (event.keyCode == 13){
             this.sendMessage();
             event.preventDefault();
         }
-            
     }
     
     sendMessage() {
