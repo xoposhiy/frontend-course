@@ -2,21 +2,26 @@ import React from 'react';
 import MessageList from './MessageList.jsx';
 import MessageBox from './MessageBox.jsx';
 import {AppBar} from "material-ui";
+import Firebase from "firebase"; 
 
 export default class App extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            messages: [
-                {user:'pe', text: 'hi :)'},
-                {user:'yoda', text: 'world hello'}
-            ]
-        };
+        this.firebase = new Firebase("https://front-lesson.firebaseio.com/messages");
+        this.state = { messages: []}; 
+        this.firebase.limitToLast(10).on("value", data => {
+           var messagesObj = data.val();
+           var messages = Object.keys(messagesObj).map(key => messagesObj[key]);
+           this.setState({messages: messages}); 
+        });
     }
     
     addMessage(message){
-        this.state.messages.push({user:'pe', text: message});
-        this.setState({messages : this.state.messages});
+        console.log("push " + message);
+        this.firebase.push({
+            user: "pe",
+            text: message
+        });
     }
 
     render() {
